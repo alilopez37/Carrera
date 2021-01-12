@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.transform.Translate;
 
 public class Controller {
 
@@ -28,7 +29,8 @@ public class Controller {
 
     @FXML
     void btnIniciarOnMouseClicked(MouseEvent event) {
-
+        Translate t = new Translate(10.0,0.0);
+        auto1.getTransforms().add(t);
     }
 
     @FXML

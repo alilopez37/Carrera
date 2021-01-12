@@ -5,7 +5,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane fx:id="canvas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.Controller">
    <children>
       <ImageView fitHeight="314.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
@@ -15,17 +14,17 @@
       </ImageView>
       <Button fx:id="btnSalir" layoutX="500.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#btnSalirOnMouseClicked" prefHeight="27.0" prefWidth="100.0" text="Salir" />
       <Button fx:id="btnIniciar" layoutX="386.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#btnIniciarOnMouseClicked" prefHeight="27.0" prefWidth="100.0" text="Iniciar" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="auto1" fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../resources/auto1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="auto2" fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../resources/auto2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="auto3" fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../resources/auto3.png" />
          </image>
