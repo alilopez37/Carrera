@@ -40,7 +40,6 @@ public class Controller implements Observer {
 
     @FXML
     void btnIniciarOnMouseClicked(MouseEvent event) {
-        System.out.println("1:" + auto1.getLayoutX());
         Vehiculo vehiculo;
 
         // Hilo para el vehículo 01
@@ -79,26 +78,26 @@ public class Controller implements Observer {
         switch(nodo.id) {
             case 1:
                 Platform.runLater( () -> auto1.getTransforms().add(t) );
-                bounds = auto1.localToScene(auto1.getBoundsInLocal());
-                System.out.println("1:" + bounds.getCenterX() );
+                bounds = auto1.getBoundsInParent();
+
+                System.out.println("1:" + auto1.getLayoutX());
                 break;
             case 2:
                 Platform.runLater( () -> auto2.getTransforms().add(t) );
-                //auto2.getTransforms().add(t);
-                bounds = auto2.localToScene(auto2.getBoundsInLocal());
-                System.out.println("2:" + bounds.getCenterX() );
+                bounds = auto2.getBoundsInParent();
+                //System.out.println("2:" + bounds);
                 break;
             case 3:
                 //auto3.getTransforms().add(t);
                 Platform.runLater( () -> auto3.getTransforms().add(t) );
-                bounds = auto3.localToScene(auto3.getBoundsInLocal());
-                System.out.println("3:" + bounds.getCenterX() );
+                bounds = auto3.getBoundsInParent();
+                //System.out.println("3:" + bounds);
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + nodo.id);
+                bounds = null;
         }
         
-        if (bounds.getCenterX() > 480){
+        if (bounds.getMaxX() > 555){
             ((Vehiculo)o).setStatus(false);
         }
         mutex.release();
@@ -106,6 +105,5 @@ public class Controller implements Observer {
 
     @FXML
     public void initialize(){
-        System.out.println("1" + auto1.getLayoutX());
     }
 }

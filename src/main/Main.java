@@ -14,7 +14,8 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("view/root.fxml"));
         primaryStage.setTitle("App - Carreras");
         //primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setScene(new Scene(root));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 

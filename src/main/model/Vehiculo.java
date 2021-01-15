@@ -17,7 +17,7 @@ public class Vehiculo extends Observable implements Runnable {
     @Override
     public void run() {
         while (status){
-            nodo.desplazamiento =  random.nextInt(6) + 5;
+            nodo.desplazamiento =  random.nextInt(6) + 1;
             this.setChanged();
             this.notifyObservers(nodo);
             try {
